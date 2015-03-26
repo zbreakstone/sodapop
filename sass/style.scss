@@ -1,0 +1,12 @@
+// Include any @imports above
+
+%section {
+	padding: 300px 0;
+}
+
+.top-section {
+	@extend %section;
+	width: 100%;
+	height: 100vh;
+	background: bisque;
+}
