@@ -9,6 +9,10 @@
 	padding: 300px 0;
 }
 
+* {
+	transform: translateZ(0);
+}
+
 .top-section {
 	@extend %section;
 	width: 100%;
