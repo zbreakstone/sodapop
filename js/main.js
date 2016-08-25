@@ -28,17 +28,27 @@ $(function() {
     email: $('#email').val(),
     industry: $('#industry').val(),
     current_persona: $('#current_persona').val()
+  };
+
+  var successFunc = function() {
+    console.log('Yay');
+  }
+
+  var failFunc = function() {
+    console.log('Boo');
   }
 
   $('#offer').submit(function(e) {
     $.ajax({
-      datatype: "json",
+      crossDomain: true,
+      datatype: "jsonp",
       contentType: "application/x-www-form-urlencoded",
-      type: "POST",
+      method: "POST",
       url: 'https://forms.hubspot.com/uploads/form/v2/321750/5e525fa8-5c62-4090-af25-adb04d1fb20d',
       data: JSON.stringify(dat),
-      success: function() {},
-      error: function() {},
+      success: successFunc(),
+      error: failFunc(),
+      jsonpCallback: successFunc()
     });
     // Stops browser refresh
     e.preventDefault();
