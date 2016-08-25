@@ -4,8 +4,12 @@ $(function() {
 
   // Create function to parse out and return HubSpot User Token value
   var getUserToken = function(arr) {
-    for (var i = 0, c = arr[i].split('='); i < arr.length; i++) {
-      return c[0] === 'hubspotutk' ? c[1] : '';
+    debug;
+    for (var i = 0, c; i < arr.length; i++) {
+      c = arr[i].split('=');
+      if (c[0] === 'hubspotutk') {
+        return c[1];
+      }
     }
   };
 
