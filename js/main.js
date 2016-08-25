@@ -11,7 +11,7 @@ $(function() {
   // }
 
   var getUserToken = function(arr) {
-    for (var i = 0, var c = arr[i].split('='); i < arr.length; i++) {
+    for (var i = 0, c = arr[i].split('='); i < arr.length; i++) {
       c[0] === 'hubspotutk' ? return c[1] : '';
     }
   };
