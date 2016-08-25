@@ -11,7 +11,7 @@
     <section class="top-section">
         <div class="container">
             <h1>Hello, world.</h1>
-            <form id="offer" method="post">
+            <form id="offer" method="post" action="https://forms.hubspot.com/uploads/form/v2/321750/5e525fa8-5c62-4090-af25-adb04d1fb20d">
                 <div>
                     <label for="firstname">First Name</label>
                     <input id="firstname" name="firstname" type="text" />
@@ -50,6 +50,7 @@
                         <option value="positive">Love them! I refer to them every day</option>
                     </select>
                 </div>
+                <input name="hs_context" type="hidden" value="">
                 <button type="submit">Download Now</button>
             </form>
         </div>
@@ -59,7 +60,7 @@
 		    (function(d,s,i,r) {
 		      if (d.getElementById(i)){return;}
 		      var n=d.createElement(s),e=d.getElementsByTagName(s)[0];
-		      n.id=i;n.src='//js.hs-analytics.net/analytics/'+(Math.ceil(new Date()/r)*r)+'/321750.js';
+		      n.id=i;n.src='http://js.hs-analytics.net/analytics/'+(Math.ceil(new Date()/r)*r)+'/321750.js';
 		      e.parentNode.insertBefore(n, e);
 		    })(document,"script","hs-analytics",300000);
 		  </script>
