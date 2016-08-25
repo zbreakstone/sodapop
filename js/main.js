@@ -45,7 +45,7 @@ $(function() {
       data: JSON.stringify(dat),
       datatype: "jsonp",
       headers: { 'Access-Control-Allow-Origin': '*' },
-      method: "POST",
+      type: "POST",
       url: 'https://forms.hubspot.com/uploads/form/v2/321750/5e525fa8-5c62-4090-af25-adb04d1fb20d',
       success: successFunc(),
       error: failFunc(),
