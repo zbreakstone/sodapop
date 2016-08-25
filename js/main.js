@@ -12,7 +12,7 @@ $(function() {
 
   var getUserToken = function(arr) {
     for (var i = 0, c = arr[i].split('='); i < arr.length; i++) {
-      c[0] === 'hubspotutk' ? return c[1] : '';
+      return c[0] === 'hubspotutk' ? c[1] : '';
     }
   };
 
