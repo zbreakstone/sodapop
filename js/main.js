@@ -4,27 +4,25 @@ $(function() {
   //
 
   var cookies = document.cookie.split('; ');
-  var hutk = [];
 
-  for (var i = 0; i < cookies.length; i++) {
-    var c = cookies[i].split('=');
-    c[0] === 'hubspotutk' ? hutk.push(c[1]) : '';
-  }
+  // for (var i = 0; i < cookies.length; i++) {
+  //   var c = cookies[i].split('=');
+  //   c[0] === 'hubspotutk' ? hutk.push(c[1]) : '';
+  // }
 
-  var data = {
-    // firstName: $('#firstName').val(),
-    // lastName: $('#lastName').val(),
-    // email: $('#email').val(),
-    // industry: $('#industry').val(),
-    // current_persona: $('#current_persona').val(),
-    hs_context: {
-      hutk: hutk[0]
+  var getUserToken = function(arr) {
+    for (var i = 0, var c = arr[i].split('='); i < arr.length; i++) {
+      c[0] === 'hubspotutk' ? return c[1] : '';
     }
-  }
+  };
 
-  var dataString = JSON.stringify(data.hs_context);
+  var hs_context = {
+    hutk: getUserToken(cookies)
+  };
 
-  $('input[name="hs_context"]').val(dataString);
+  var contextString = JSON.stringify(hs_context);
+
+  $('input[name="hs_context"]').val(contextString);
 });
 
 // $('#myform').submit(function(e) {
