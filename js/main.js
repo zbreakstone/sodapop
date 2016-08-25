@@ -20,7 +20,7 @@ $(function() {
     hutk: getUserToken(cookies), // Runs function and sets result as the value of the hutk property
     pageURL: pageURL,
     pageName: pageName,
-    redirectURl: redirectURL;
+    redirectURl: redirectURL
   };
 
   var contextString = JSON.stringify(hs_context); // Converts payload to JSON string
